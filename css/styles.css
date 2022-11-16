@@ -1,0 +1,243 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos de body */
+
+body{
+    background-color: rgb(252, 227, 207);
+    margin: 15px;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* estilos de header */
+
+header{
+    grid-area: header;
+    position: relative;
+    z-index: 2;
+}
+
+header .alineacion-menu{
+    justify-content: right;
+}
+
+header .alineacion-menu .botones-menu{
+    background-color: rgb(252, 238, 218);
+    border-radius: 30px;
+    box-shadow: 0.5px 0.5px 3px;
+    color: black;
+    margin: 10px;
+}
+
+header .alineacion-menu .botones-menu:hover{
+    transform: scale(1.1);
+}
+
+/* estilos de main */
+
+main{
+    grid-area: main;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main .logo{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    display: none;
+}
+
+main .logo img{
+    width: 100px; 
+    height: 100px;
+    border-radius: 200px;   
+    margin: 2px; 
+}
+
+main .logo span{
+    background-color: rgb(252, 238, 218);
+    font-style: italic;
+}
+
+/* estilos de section */
+
+section{
+    grid-area: section;
+    position: relative;
+    margin: 30px;
+}
+
+/* estilos de index */
+
+main p span{
+    font-weight: bold;
+}
+
+main .p-uno{
+    font-size: 1.3rem;
+}
+
+main .p-dos, .p-tres{
+    font-size: 1.2rem;
+}
+
+section img{
+    width: 100%;
+    box-shadow: 0.5px 0.5px 3px;
+    border-radius: 10px;
+}
+
+/* estilos de plan-alimentacion */
+
+main p{
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+main ol{
+    text-align: left;
+    font-size: 1.1rem;
+    margin: 15px;
+}
+
+main ol span{
+    font-weight: bold;
+}
+
+section .gapa, .inbody{
+    display: none;
+}
+
+/* estilos de consultas-presenciales */
+
+section h2{
+    text-align: center;
+    font-style: italic;
+}
+
+/* estilos de consultas-virtuales */
+
+section video{
+    width: 60%;
+}
+
+/* estilos de contacto */
+
+main .info{
+    display: flex;
+    justify-content: space-around;
+}
+
+main .info img{
+    width: 3%;
+    height: 70%;
+}
+
+main .info h3{
+    font-size: 1.3rem;
+}
+
+section form{
+    width: 500px;
+    background-color: rgb(252, 238, 218);
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 3px;
+}
+
+section form label, input{
+    margin: 5px;
+}
+
+/* estilos de footer */
+
+footer{
+    grid-area: footer;
+    background-color: rgb(252, 238, 218);
+    height: 50px;
+    width: 98%;
+    margin: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h2{
+    font-size: 1.2rem;
+}
+
+footer .redesSociales ul{
+    list-style: none;
+    display: flex;
+}
+
+footer .redesSociales ul li{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+footer .redesSociales ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width:820px) {
+    /* estilos de main */
+    main .logo{
+        display: inline;
+    }
+
+    main .logo span{
+        display: none;
+    }
+
+    /* estilos de plan-alimentacion */
+
+    section .gapa, .inbody{
+        display: block;
+    }
+
+    section .gapa{
+        width: 65%;
+        border-radius: 700px;
+        position: absolute;
+        margin-top: 10px;
+    }
+    
+    section .inbody{
+        width: 80%;
+        border-radius: 900px;
+        margin-left: 120px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    /* estilos del contenedor */
+
+    .contenedor{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-areas:
+        "header header"
+        "main section"
+        "footer footer";
+    }
+}
+
+@media screen and (min-width:1200px) {
+    /* estilos de main */
+
+    main .logo span{
+        display: inline;
+    }
+}
